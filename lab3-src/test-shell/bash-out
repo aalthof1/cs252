@@ -1,0 +1,2 @@
+MANPATH=:/var/cfengine/share/man
+PATH=/homes/aalthof/bin/.x86_64-linux:/homes/aalthof/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:.:/p/xinu/bin

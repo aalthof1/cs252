@@ -1,0 +1,5 @@
+Features that work:
+IO, piping, background, zombie killing, most environment commands, cd, quotes (sort of), tilde expansion, simple wildcarding, ctrl-C, exit, some environment expansion
+
+Features that DO NOT work:
+complex wildcarding, source, subshell, readline (it was extremely buggy so i removed it completely)

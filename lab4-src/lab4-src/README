@@ -1,0 +1,16 @@
+3) The thr1 output is the letters A, B, and C being printed repeatedly in a random order (sometimes the same letter is printed multiple times in a row)
+5) Because the printC function is an infinite loop and the threads are created after calling printC without a thread, it enters an infinite loop before the pthread_create calls, do those calls are never reached.
+_________________________________________________________________________
+
+
+				System time	User time	Real time
+
+pthread_mutex(count)		0.00s		0.12s		0.13s
+
+spin lock(with yield)		0.04s		0.17s		0.14s
+
+spin lock(without yield)	0.00s		0.30s		0.19s
+
+1. User and real time dramatically decrease when using count_spin with yield, because the thread gives up the cpu so another processs can run.
+2. mutex locks are built on top of spin locks, but they put threads in a wait state instead of spinning so there are less CPU cycles wasted.
+ 
